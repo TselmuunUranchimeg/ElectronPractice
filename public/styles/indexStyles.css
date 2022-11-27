@@ -1,0 +1,93 @@
+.index {
+    text-align: center;
+    padding-top: 3.5rem;
+    font-size: 1.25rem;
+}
+.index h1 {
+    margin: 0;
+}
+.index form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.ol-container {
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 65%;
+    margin-bottom: 1rem;
+}
+
+.index-inputs {
+    position: relative;
+}
+.index-inputs li {
+    width: 100%;
+    list-style: decimal;
+}
+.index-inputs li input {
+    width: calc(80% - 82px);
+    margin-bottom: 1.5rem;
+    border: 0;
+    padding: 10px;
+}
+.index-inputs li p {
+    font-size: large;
+    margin: 0;
+    display: none;
+    margin-bottom: 1rem;
+    color: #7C0A02;
+    font-weight: bold;
+}
+.index-inputs li button {
+    margin-left: 1rem;
+    background-color: lightblue;
+    border: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.submit-button,
+.add-button {
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #a52a2b;
+    transition-duration: 100ms;
+    margin-right: 1.5rem;
+}
+.submit-button:hover {
+    background-color: #7c0a02;
+}
+
+.add-button {
+    background-color: #009965;
+}
+
+.error {
+    display: block !important;
+}
+
+@media (max-width: 800px) {
+    .index h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .index-inputs li {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .index-inputs li input {
+        width: 80%;
+    }
+}

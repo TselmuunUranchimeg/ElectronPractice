@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; img-src 'self' https://i.ytimg.com"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; img-src 'self' https://i.ytimg.com"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/indexStyles.css" />
+        <link rel="stylesheet" href="styles/common.css" />
+        <title>Converter</title>
+    </head>
+    <body>
+        <div class="background">
+            <div class="left">
+                <div class="block-1"></div>
+                <div class="block-2"></div>
+                <div class="block-3"></div>
+            </div>
+            <div class="right">
+                <div class="block-1"></div>
+                <div class="block-2"></div>
+                <div class="block-3"></div>
+            </div>
+        </div>
+        <div id="loader" class="invisible">
+            <div class="loader"></div>
+        </div>
+        <div class="index">
+            <h1>Convert YouTube videos to mp3 files</h1>
+            <form>
+                <div class="ol-container">
+                    <ol class="index-inputs">
+                        <li id="list-0">
+                            <input
+                                type="text"
+                                placeholder="YouTube video URL..."
+                                required
+                            />
+                            <button type="button" id="0">
+                                Remove
+                            </button>
+                            <p id = "error-0">Invalid link</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="index-buttons">
+                    <button type="submit" class="submit-button">Convert</button>
+                    <button type="button" class="add-button">
+                        Add another URL
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="../dist/script/indexFile.js"></script>
+</html>

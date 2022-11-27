@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta 
+        http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; script-src 'self'; img-src 'self' https://i.ytimg.com" 
+    />
+    <meta 
+        http-equiv="X-Content-Security-Policy" 
+        content="default-src 'self'; script-src 'self'; img-src 'self' https://i.ytimg.com"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/confirmStyles.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <title></title>
+</head>
+<body>
+    <div class = "background">
+        <div class = "left">
+            <div class = "block-1"></div>
+            <div class = "block-2"></div>
+            <div class = "block-3"></div>
+        </div>
+        <div class = "right">
+            <div class = "block-1"></div>
+            <div class = "block-2"></div>
+            <div class = "block-3"></div>
+        </div>
+    </div>
+    <div id = "loader">
+        <div class = "loader"></div>
+    </div>
+    <div class = "container">
+        <div class = "info-container"></div>
+        <div class = "location">
+            <button id = "locationButton">Set location</button>
+            <div>
+                <p id = "location">Location...</p>
+            </div>
+        </div>
+        <div>
+            <button id = "confirm" type="button">Confirm</button>
+            <button id = "goBack" type="button">Go back</button>
+        </div>
+    </div>
+</body>
+<script src = "../dist/script/confirmFile.js"></script>
+</html>
