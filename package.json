@@ -1,20 +1,23 @@
 {
   "name": "converter",
   "version": "1.0.0",
-  "author": "Tselmuun",
-  "description": "app to download songs",
+  "description": "An app to download songs",
   "main": "dist/main.js",
-  "productName": "Converter",
+  "productName": "ConverterApp",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "dev": "tsc && electron dist/main.js",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "make-win": "electron-forge make --platform=win32",
-    "make-mac": "electron-forge make --platform=darwin"
+    "make-mac": "electron-forge make --platform darwin",
+    "make-win": "electron-forge make --platform win32"
   },
   "keywords": [],
+  "author": {
+    "name": "Tselmuun",
+    "email": "tselmuunu@yahoo.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.3",
@@ -41,12 +44,18 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./assets/icon"
+        "icon": "./assets/icon",
+        "name": "ConverterApp",
+        "executableName": "converter"
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
-          "config": {}
+          "config": {
+            "name": "converter",
+            "authors": "Tselmuun",
+            "description": "An app to download songs"
+          }
         },
         {
           "name": "@electron-forge/maker-zip",
@@ -56,7 +65,9 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "icon": "./assets/icon.png"
+          }
         }
       ]
     }

@@ -1,4 +1,5 @@
 import { join } from "path";
+import { platform } from "os";
 import { existsSync, mkdirSync } from "fs";
 import { app, BrowserWindow, ipcMain } from "electron";
 import { getFilePath, getInfo, getAudio } from "./lib/core";
@@ -12,7 +13,10 @@ const createWindow = async () => {
         },
         show: false,
         autoHideMenuBar: true,
-        icon: "../assets/icon.png",
+        icon: join(
+            app.getAppPath(),
+            platform() === "win32" ? "assets/icon.ico" : "assets/icon.png"
+        ),
     });
     win.maximize();
     win.show();
