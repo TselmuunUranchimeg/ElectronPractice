@@ -14,7 +14,7 @@ const createWindow = async () => {
         show: false,
         autoHideMenuBar: true,
         icon: join(
-            app.getAppPath(),
+            app.getAppPath(), "../",
             platform() === "win32" ? "assets/icon.ico" : "assets/icon.png"
         ),
     });
